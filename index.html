@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Stress Level Predictor</title>
+</head>
+
+<body>
+    <h1>Predict Academic Stress Level</h1>
+    <form action="/predict" method="post">
+        <label for="peer_pressure">Peer Pressure (1-5):</label><br>
+        <input type="number" id="peer_pressure" name="peer_pressure" min="1" max="5" required><br><br>
+
+        <label for="home_pressure">Academic Pressure from Home (1-5):</label><br>
+        <input type="number" id="home_pressure" name="home_pressure" min="1" max="5" required><br><br>
+
+        <label for="study_env">Study Environment:</label><br>
+        <select id="study_env" name="study_env" required>
+            <option value="Noisy">Noisy</option>
+            <option value="Peaceful">Peaceful</option>
+        </select><br><br>
+
+        <label for="bad_habits">Bad Habits (Smoking, Drinking Daily)?</label><br>
+        <select id="bad_habits" name="bad_habits" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict Stress Level">
+    </form>
+</body>
+
+</html>
